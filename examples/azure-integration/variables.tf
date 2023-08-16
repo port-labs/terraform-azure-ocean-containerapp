@@ -46,7 +46,7 @@ variable "action_permissions_list" {
   default = [
       "Microsoft.Resources/subscriptions/resources/read",
       "microsoft.app/containerapps/read",
-      "Microsoft.Storage/storageAccounts/read",
+      "Microsoft.Storage/storageAccounts/*/read",
       "Microsoft.ContainerService/managedClusters/read",
       "Microsoft.Network/loadBalancers/read",
       "Microsoft.Resources/subscriptions/resourceGroups/read",
