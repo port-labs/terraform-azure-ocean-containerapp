@@ -1,12 +1,15 @@
 variable "port_client_id" {
   type = string
+  description = "The Port client id"
 }
 variable "port_client_secret" {
   type = string
+  description = "The Port client secret"
 }
 variable "port_base_url" {
   type = string
   default = ""
+  description = "The Port base url, if not provided the module will use the prod url"
 }
 variable "event_grid_system_topic_name" {
   type = string
