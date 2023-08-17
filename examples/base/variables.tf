@@ -19,9 +19,14 @@ variable "initialize_port_resources" {
 
 variable "integration_identifier" {
     type = string
-    default = "azure"
     description = "The identifier of the integration"
 }
+
+variable "integration_type" {
+    type = string
+    description = "The type of the integration"
+}
+
 
 variable "location" {
   type    = string
