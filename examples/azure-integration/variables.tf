@@ -86,3 +86,9 @@ variable "resource_group_name" {
   default = null
   description = "The resource group to deploy the container to and where the role definition will be created"
 }
+
+variable "integration_version" {
+  type    = string
+  default = "latest"
+  description = "The version of the integration to deploy"
+}

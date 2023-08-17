@@ -27,6 +27,11 @@ variable "integration_type" {
     description = "The type of the integration"
 }
 
+variable "integration_version" {
+  type    = string
+  default = "latest"
+  description = "The version of the integration to deploy"
+}
 
 variable "location" {
   type    = string

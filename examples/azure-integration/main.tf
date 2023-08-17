@@ -21,11 +21,11 @@ module "ocean_integration" {
 
   # required port integration parameters so Port could identify the integration
   integration = {
-    type       = "azure"
     identifier = "azure"
     config     = {
     }
   }
+  integration_version = var.integration_version
   # add resource group option
   # optional port integration parameters
   subscription_id = "/subscriptions/${var.subscription_id}"

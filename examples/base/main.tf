@@ -17,6 +17,7 @@ module "ocean_integration" {
     config     = {
     }
   }
+  integration_version = var.integration_version
   resource_group_name = var.resource_group_name
   location = var.location
 
