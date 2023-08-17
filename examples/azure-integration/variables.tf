@@ -8,7 +8,7 @@ variable "port_client_secret" {
 }
 variable "port_base_url" {
   type = string
-  default = ""
+  default = "https://api.getport.io"
   description = "The Port base url, if not provided the module will use the prod url"
 }
 variable "event_grid_system_topic_name" {

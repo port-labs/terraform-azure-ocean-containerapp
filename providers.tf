@@ -13,6 +13,8 @@ terraform {
       version = "0.2.1"
     }
   }
+
+  required_version = "> 0.13.0"
 }
 provider "azurerm" {
   # The AzureRM Provider supports authenticating using via the Azure CLI, a Managed Identity

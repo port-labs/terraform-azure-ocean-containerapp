@@ -40,7 +40,7 @@ variable "port" {
   type = object({
     client_id     = string
     client_secret = string
-    base_url      = optional(string)
+    base_url      = optional(string, "https://api.getport.io")
   })
   description = "The port configuration, this is used to authenticate with the port API"
 }
