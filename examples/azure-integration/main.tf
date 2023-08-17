@@ -21,6 +21,7 @@ module "ocean_integration" {
 
   # required port integration parameters so Port could identify the integration
   integration = {
+    type       = "azure"
     identifier = "azure"
     config     = {
     }
