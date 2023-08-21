@@ -17,7 +17,7 @@ module "ocean_integration" {
   }
 
   initialize_port_resources = var.initialize_port_resources
-  resource_group_name = var.resource_group_name
+  event_listener = var.event_listener
 
   # required port integration parameters so Port could identify the integration
   integration = {
@@ -27,8 +27,9 @@ module "ocean_integration" {
     }
   }
   integration_version = var.integration_version
-  # add resource group option
+
   # optional port integration parameters
+  resource_group_name = var.resource_group_name
   subscription_id = "/subscriptions/${var.subscription_id}"
   location = var.location
 

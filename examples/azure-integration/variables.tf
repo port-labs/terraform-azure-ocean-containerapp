@@ -92,3 +92,41 @@ variable "integration_version" {
   default = "latest"
   description = "The version of the integration to deploy"
 }
+
+variable "integration_type" {
+    type    = string
+    default = "azure"
+    description = "The type of the integration to deploy"
+}
+
+variable "integration_identifier" {
+    type    = string
+    default = "azure"
+    description = "The identifier of the integration to deploy"
+}
+
+variable "event_listener" {
+  type = object({
+    type = string
+
+    # POLLING
+    resync_on_start = optional(bool)
+    interval        = optional(number)
+
+    # WEBHOOK
+    app_host = optional(string)
+
+
+    # KAFKA
+    brokers                  = optional(list(string))
+    security_protocol        = optional(list(string))
+    authentication_mechanism = optional(list(string))
+    kafka_security_enabled   = optional(list(bool))
+    consumer_poll_timeout    = optional(list(number))
+  })
+
+  default = {
+    type = "POLLING"
+  }
+  description = "The event listener configuration"
+}

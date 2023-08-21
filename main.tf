@@ -22,6 +22,7 @@ module "port_ocean_container_app" {
   integration = var.integration
   port = var.port
   initialize_port_resources = var.initialize_port_resources
+  event_listener = var.event_listener
   location = var.location
   resource_group_name = var.resource_group_name != null ? var.resource_group_name : azurerm_resource_group.ocean-rg[0].name
   container_app_environment_id = var.container_app_environment_id

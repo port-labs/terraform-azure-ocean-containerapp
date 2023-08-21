@@ -9,6 +9,7 @@ module "ocean_integration" {
   }
 
   initialize_port_resources = var.initialize_port_resources
+  event_listener = var.event_listener
 
   # required port integration parameters so Port could identify the integration
   integration = {
@@ -18,6 +19,7 @@ module "ocean_integration" {
     }
   }
   integration_version = var.integration_version
+
   resource_group_name = var.resource_group_name
   location = var.location
 
